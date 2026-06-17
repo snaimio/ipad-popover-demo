@@ -1,17 +1,20 @@
 //
-//  ipadPopoverDemo2026App.swift
-//  ipadPopoverDemo2026
+//  iPadPopoverDemoApp.swift
+//  iPadPopoverDemo
 //
-//  Created by Sheikh Naim on 2026-06-17.
+//  Created by Sheikh Naim on 2025-10-21.
 //
 
 import SwiftUI
 
 @main
-struct ipadPopoverDemo2026App: App {
+struct iPadPopoverDemoApp: App {
+    @StateObject private var settings = SettingsStore()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(settings)
         }
     }
 }
