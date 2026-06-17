@@ -1,8 +1,8 @@
 //
 //  DetailView.swift
-//  iPadPopoverDemo
+//  iPadPopoverDemo2026
 //
-//  Created by Sheikh Naim on 2025-10-21.
+//  Created by Sheikh Naim on 2026-06-17.
 //
 
 import SwiftUI
@@ -42,7 +42,9 @@ struct DetailView: View {
                          arrowEdge: .top) {
                     SettingsPopoverView(isPresented: $showingPopover)
                         .environmentObject(settings)
-                        .frame(width: 380, height: 280)
+                        .preferredColorScheme(preferredColorScheme(for: settings.theme))
+                        .frame(minWidth: 320, idealWidth: 360, maxWidth: 420,
+                               minHeight: 320, idealHeight: 400, maxHeight: 500)
                 }
                 .onHover { over in
                     // pointer feedback on iPad trackpad/mouse
